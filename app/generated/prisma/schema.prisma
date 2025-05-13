@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider     = "postgresql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model User {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  clerkId   String   @unique
+  email     String   @unique
+
+  entries MoodEntry[]
+}
+
+model MoodEntry {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  mood         Int // -2 to +2
+  journalEntry String @db.Text
+  sleepHours   Float
+
+  feelings FeelingTag[] @relation("MoodEntryFeelings")
+
+  @@index([userId])
+}
+
+model FeelingTag {
+  id   String @id @default(uuid())
+  name String @unique
+
+  entries MoodEntry[] @relation("MoodEntryFeelings")
+}
+
+model MoodQuote {
+  id        String @id @default(uuid())
+  moodLevel Int // -2 to +2
+  quote     String @db.Text
+
+  @@index([moodLevel])
+}
