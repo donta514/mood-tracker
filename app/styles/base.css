@@ -1,0 +1,61 @@
+/* ===== CSS Reset (modern-normalize-ish) ===== */
+/* === base.css === */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: var(--font-family-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--gradient-light);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* === utility classes === */
+.rounded {
+    border-radius: var(--radius-8);
+}
+
+.bg-neutral {
+    background-color: var(--color-neutral-200);
+}
+
+.text-primary {
+    color: var(--color-blue-700);
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}

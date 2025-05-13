@@ -1,0 +1,28 @@
+/* === typography.css === */
+.text-heading-1 {
+    font-size: var(--text-1-size);
+    line-height: var(--text-1-line);
+    letter-spacing: var(--text-1-spacing);
+    font-weight: bold;
+}
+
+.text-body-6 {
+    font-size: var(--text-6-size);
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+/* Responsive text styles */
+@media (max-width: 375px) {
+    .text-heading-1 {
+        font-size: var(--text-1-mobile-size);
+        line-height: var(--text-1-mobile-line);
+    }
+}
+
+@media (max-width: 768px) {
+    .text-heading-1 {
+        font-size: var(--text-1-mobile-size);
+        line-height: var(--text-1-mobile-line);
+    }
+}
