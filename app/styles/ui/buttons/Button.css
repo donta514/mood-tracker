@@ -1,0 +1,32 @@
+.button {
+    padding-left: var(--spacing-400);
+    padding-right: var(--spacing-400);
+    padding-top: var(--spacing-150);
+    padding-bottom: var(--spacing-150);
+    cursor: pointer;
+    border: none;
+    border-radius: var(--radius-10);
+    color: var(--neutral-0);
+    transition: background-color 0.2s ease;
+}
+
+/* Shared states */
+.button:focus {
+    outline: 1px solid var(--blue-600);
+    outline-offset: 2px;
+}
+
+.button:disabled {
+    background-color: var(--blue-200);
+    cursor: not-allowed;
+}
+
+/* Variants */
+.button-default {
+    background-color: var(--blue-600);
+    color: var(--neutral-0);
+}
+
+.button-default:hover:not(:disabled) {
+    background-color: var(--blue-700);
+}

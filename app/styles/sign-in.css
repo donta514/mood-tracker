@@ -1,0 +1,29 @@
+.formContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .formLogo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: clamp(2rem, 1.0458rem + 4.0712vw, 3rem);
+        gap: 1rem;
+        h1 {
+            font-size: 1.313rem;
+        }
+    }
+
+    .SignInForm {
+        background: var(--neutral-0);
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: clamp(1rem, 0.0458rem + 4.0712vw, 2rem);
+        padding-right: clamp(1rem, 0.0458rem + 4.0712vw, 2rem);
+        border-radius: var(--radius-16);
+        width: clamp(21.4375rem, 10.2853rem + 47.5827vw, 33.125rem);
+    }
+}
+
+

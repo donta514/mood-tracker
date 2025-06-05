@@ -1,0 +1,35 @@
+.input-error {
+    border: 1px solid var(--red-700);
+}
+
+.input-error-message {
+    color: var(--red-700);
+}
+
+.input-error-group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-075);
+    margin-top: var(--spacing-075);
+}
+
+.input-default {
+    border: 1px solid var(--neutral-300);
+    color: var(--neutral-600);
+}
+
+.input:active {
+    border: 1px solid var(--neutral-600);
+    color: var(--neutral-900);
+}
+
+.input:focus {
+    outline: 1px solid var(--blue-600);
+    outline-offset: 2px;
+    color: var(--neutral-600);
+}
+
+.input:hover {
+    border: 1px solid var(--neutral-600);
+    color: var(--neutral-600);
+}

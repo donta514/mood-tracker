@@ -1,3 +1,109 @@
+.text-preset-1 {
+    font-size: 3.25rem;
+    line-height: 140%;
+    letter-spacing: -0.125rem;
+    font-weight: 700;
+}
+
+.text-preset-1-mb {
+    font-size: 2.875rem;
+    line-height: 120%;
+    letter-spacing: -0.125rem;
+    font-weight: 700;
+}
+
+.text-preset-2 {
+    font-size: 2.5rem;
+    line-height: 120%;
+    letter-spacing: -.3px;
+    font-weight: 700;
+}
+
+.text-preset-2-mb {
+    font-size: 2rem;
+    line-height: 120%;
+    letter-spacing: -.3px;
+    font-weight: 700;
+}
+
+.text-preset-3 {
+    font-size: 2rem;
+    line-height: 140%;
+    letter-spacing: -.3px;
+    font-weight: 700;
+}
+
+.text-preset-3-mb {
+    font-size: 1.75rem;
+    line-height: 130%;
+    letter-spacing: -.3px;
+    font-weight: 700;
+}
+
+.text-preset-4 {
+    font-size: 1.5rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+    font-weight: 600;
+}
+
+.text-preset-4-reg {
+    font-size: 1.5rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+    font-weight: 400;
+}
+
+.text-preset-5 {
+    font-size: 1.25rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+    font-weight: 600;
+}
+
+.text-preset-6 {
+    font-size: 1.125rem;
+    line-height: 120%;
+    letter-spacing: 0px;
+    font-weight: 500;
+}
+
+.text-preset-6-italic {
+    font-size: 1.125rem;
+    line-height: 130%;
+    letter-spacing: 0px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.text-preset-6-reg {
+    font-size: 1.125rem;
+    line-height: 140%;
+    letter-spacing: -.3px;
+    font-weight: 400;
+}
+
+.text-preset-7 {
+    font-size: .938rem;
+    line-height: 140%;
+    letter-spacing: -.3px;
+    font-weight: 400;
+}
+
+.text-preset-8 {
+    font-size: .813rem;
+    line-height: 100%;
+    letter-spacing: 0px;
+    font-weight: 600;
+}
+
+.text-preset-9 {
+    font-size: .75rem;
+    line-height: 100%;
+    letter-spacing: 0px;
+    font-weight: 400;
+}
+
 /* === typography.css === */
 .text-heading-1 {
     font-size: var(--text-1-size);

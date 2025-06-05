@@ -1,0 +1,27 @@
+.button-secondary {
+    padding-left: var(--spacing-200);
+    padding-right: var(--spacing-200);
+    padding-top: var(--spacing-100);
+    padding-bottom: var(--spacing-100);
+    cursor: pointer;
+    border: 1px solid var(--neutral-300);
+    border-radius: var(--radius-8);
+    color: var(--neutral-900);
+    transition: border 0.2s ease;
+}
+
+/* Shared states */
+.button-secondary:focus {
+    outline: 1px solid var(--neutral-600);
+    outline-offset: 2px;
+}
+
+/* Variants */
+.button-secondary-default {
+    background-color: var(--neutral-0);
+    color: var(--neutral-900);
+}
+
+.button-secondary-default:hover:not(:disabled) {
+    border: 1px solid var(--neutral-900);
+}
