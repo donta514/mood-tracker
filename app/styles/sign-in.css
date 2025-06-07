@@ -1,28 +1,92 @@
-.formContainer {
+.form-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    .formLogo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .form-logo {
+        width: 177px;
+        height: 40px;
         margin-bottom: clamp(2rem, 1.0458rem + 4.0712vw, 3rem);
-        gap: 1rem;
-        h1 {
-            font-size: 1.313rem;
-        }
+        margin-inline: auto;
     }
 
-    .SignInForm {
+    .sign-in {
         background: var(--neutral-0);
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: var(--spacing-500);
+        padding-bottom: var(--spacing-500);
         padding-left: clamp(1rem, 0.0458rem + 4.0712vw, 2rem);
         padding-right: clamp(1rem, 0.0458rem + 4.0712vw, 2rem);
         border-radius: var(--radius-16);
         width: clamp(21.4375rem, 10.2853rem + 47.5827vw, 33.125rem);
+
+        .sign-in-heading {
+            margin-bottom: var(--spacing-100);
+            color: var(--neutral-900);
+        }
+
+        .sign-in-text {
+            color: var(--neutral-600);
+            margin-bottom: var(--spacing-400);
+        }
+
+        .sign-in-fields {
+            display: grid;
+            gap: 20px;
+
+            .sign-in-email-fields {
+                display: flex;
+                flex-direction: column;
+
+                .email-label-field {
+                    margin-bottom: var(--spacing-100);
+                    color: var(--neutral-900);
+                }
+
+                .email-input-field {
+                    padding-top: var(--spacing-200);
+                    padding-bottom: var(--spacing-200);
+                    padding-left: var(--spacing-150);
+                    padding-right: var(--spacing-150);
+                    border-radius: var(--radius-10);
+                    color: var(--neutral-600);
+                    /* border: 1px solid var(--neutral-300); */
+                }
+            }
+
+            .sign-in-password-fields {
+                display: flex;
+                flex-direction: column;
+
+                .password-label-field {
+                    margin-bottom: var(--spacing-100);
+                    color: var(--neutral-900);
+                }
+
+                .password-input-field {
+                    padding-top: var(--spacing-200);
+                    padding-bottom: var(--spacing-200);
+                    padding-left: var(--spacing-150);
+                    padding-right: var(--spacing-150);
+                    border-radius: var(--radius-10);
+                    color: var(--neutral-600);
+                    border: 1px solid var(--neutral-300);
+                    margin-bottom: var(--spacing-400);
+                }
+            }
+        }
+
+        .sign-in-button {
+            width: 100%;
+            margin-bottom: var(--spacing-250);
+        }
+
+        .redirect-message {
+            display: flex;
+            gap: var(--spacing-050);
+            justify-content: center;
+            color: var(--neutral-600);
+        }
     }
 }
 

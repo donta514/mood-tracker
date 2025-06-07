@@ -49,10 +49,10 @@ export default function SignUpPage() {
               submit
               asChild
             >
-              <Button variant="default">Sign up</Button>
+              <Button variant="default">Sign Up</Button>
             </SignUp.Action>
 
-            <div className="login-redirect-message text-preset-6-reg">
+            <div className="redirect-message text-preset-6-reg">
               <p>Already got an account?</p>
               <a href="/sign-in">Log in.</a>
             </div>

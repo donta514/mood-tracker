@@ -1,48 +1,58 @@
-// import { SignIn } from "@clerk/nextjs";
-
-// const SignInPage = () => {
-//   return <SignIn />;
-// };
-
-// export default SignInPage;
-
 "use client";
 
 import * as Clerk from "@clerk/elements/common";
 import * as SignIn from "@clerk/elements/sign-in";
-import Image from "next/image";
+import Button from "@/app/components/ui/buttons/Button";
+import Input from "@/app/components/ui/inputs/Input";
 
 export default function SignInPage() {
   return (
-    <div className="formContainer">
-      <div className="formLogo">
-        <Image src="app/assets/images/logo.svg" width={40} height={40} alt="" />
-        <h1>Mood tracker</h1>
-      </div>
-      <div className="SignInForm">
+    <div className="form-container">
+      <img className="form-logo" src="/assets/images/logo.svg" alt="logo" />
+      <div className="sign-in">
         <SignIn.Root>
           <SignIn.Step name="start">
-            <h2 className="formHeading">Welcome Back!</h2>
-            <p className="formBodyText">
+            <h2 className="sign-in-heading text-preset-3">Welcome Back!</h2>
+            <p className="sign-in-text text-preset-6-reg">
               Log in to continue tracking your mood and sleep.
             </p>
+            <div className="sign-in-fields">
+              <Clerk.Field className="sign-in-email-fields" name="emailAddress">
+                <Clerk.Label className="email-label-field text-preset-6-reg">
+                  Email address
+                </Clerk.Label>
+                <Clerk.Input
+                  asChild
+                  className="email-input-field text-preset-6-reg"
+                >
+                  <Input
+                    id="username"
+                    name="username"
+                    placeholder="name@mail.com"
+                  />
+                </Clerk.Input>
+                <Clerk.FieldError className="text-preset-6-reg" />
+              </Clerk.Field>
 
-            <Clerk.Field name="identifier">
-              <Clerk.Label>Email</Clerk.Label>
-              <Clerk.Input />
-              <Clerk.FieldError />
-            </Clerk.Field>
+              <Clerk.Field className="sign-in-password-fields" name="password">
+                <Clerk.Label className="password-label-field text-preset-6-reg">
+                  Password
+                </Clerk.Label>
+                <Clerk.Input className="password-input-field text-preset-6-reg" />
+                <Clerk.FieldError className="text-preset-6-reg" />
+              </Clerk.Field>
+            </div>
 
-            <Clerk.Field name="password">
-              <Clerk.Label>Password</Clerk.Label>
-              <Clerk.Input />
-              <Clerk.FieldError />
-            </Clerk.Field>
-
-            <SignIn.Action submit>Log in</SignIn.Action>
-            <div>
+            <SignIn.Action
+              className="sign-in-button text-preset-5"
+              submit
+              asChild
+            >
+              <Button variant="default">Log In</Button>
+            </SignIn.Action>
+            <div className="redirect-message text-preset-6-reg">
               <p>Haven't got an account?</p>
-              <a href="/sign-up">Sign up</a>
+              <a href="/sign-up">Sign up.</a>
             </div>
           </SignIn.Step>
 

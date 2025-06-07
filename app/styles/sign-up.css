@@ -81,7 +81,7 @@
             margin-bottom: var(--spacing-250);
         }
 
-        .login-redirect-message {
+        .redirect-message {
             display: flex;
             gap: var(--spacing-050);
             justify-content: center;

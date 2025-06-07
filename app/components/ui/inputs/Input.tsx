@@ -24,7 +24,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           id={id}
           className={`${
-            error ? "input-error" : "input"
+            error ? "input-error" : ""
           } input-${variant} ${className}`}
           {...props}
         />
